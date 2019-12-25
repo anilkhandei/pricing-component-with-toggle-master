@@ -1,0 +1,89 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Very Light Grayish Blue: hsl(240, 78%, 98%)
+Light Grayish Blue: hsl(234, 14%, 74%)
+Grayish Blue: hsl(233, 13%, 49%)
+Dark Grayish Blue: hsl(232, 13%, 33%) */
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: hsl(240, 78%, 98%);
+   
+}
+.container{
+    margin-top: 10vh;
+    /* background-image: url(/pricing-component-with-toggle-master/images/bg-top.svg), url(/pricing-component-with-toggle-master/images/bg-bottom.svg);
+    background-position: right top, left bottom;
+    background-repeat: no-repeat, no-repeat; */
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.header{
+    /* border: 1px solid; */
+    width: 25%;
+    margin-bottom: 10vh;
+}
+.pricing-header{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: hsl(232, 13%, 33%);
+    margin-bottom: 2.5vh;
+}
+.pricing-toggle{
+    color:hsl(234, 14%, 74%);
+    font-weight: bold;
+}
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-basic{
+    /* border: 1px solid; */
+    border-radius: 10px 0px 0px 10px;
+    width: 25vw;
+    height: 55vh;
+    background-color: white;
+}
+.card-proff{
+    height: 60vh;
+    width: 25vw;
+    /* border: 1px solid; */
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 10px;
+    z-index: 2;
+}
+.card-master{
+    /* border: 1px solid; */
+    border-radius: 0px 10px 10px 0px;
+    height: 55vh;
+    width: 25vw;
+    background-color: white;
+}
+/* [class*="card-"] */
+.card-basic,.card-master {
+    box-shadow: 2px 2px 15px 1px #888888;
+}
+.card-header{
+    color: hsl(232, 13%, 33%);
+    font-weight: bold;
+    height: 10vh;
+    margin-top: 20px;
+    border: 1px solid red;
+}
+.card-amount{
+    border: 1px solid;
+    font-size:xx-large;
+    font-weight: 900;
+}
