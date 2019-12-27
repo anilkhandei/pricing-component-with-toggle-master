@@ -15,13 +15,21 @@
   <div class="container">
     <div class="header">
       <p class="pricing-header">
-
         Our Pricing
-
       </p>
-      <div class="pricing-toggle">
-        Annually
-        Monthly
+      <div class="pricing-toggle">  
+        <div class="text-align-middle">
+          Annually
+        </div>
+        <div>
+        <label for="input-check" >
+          <input type="checkbox" id="input-check">
+          <div class="switch"></div>
+        </label>
+      </div>
+        <div class="text-align-middle">
+          Monthly
+        </div>
       </div>
     </div>
     <div class="cards-container">
@@ -30,7 +38,7 @@
           Basic
         </div>
         <div class="card-amount monthly">
-          <span>
+          <span class="dollar">
             &dollar;
           </span>
           <span>
@@ -67,7 +75,8 @@
           Professional
         </div>
         <div class="card-amount monthly">
-          &dollar;24.99
+          <span class="dollar">$</span>
+          24.99
         </div>
         <div class="card-amount annual" style="display: none;">
           &dollar;249.99
@@ -101,10 +110,11 @@
           Master
         </div>
         <div class="card-amount monthly">
-          &dollar;39.99
+          <span>&dollar;</span>
+          39.99
         </div>
         <div class="card-amount yearly" style="display: none;">
-          &dollar;399.99
+          <span>&dollar;</span>399.99
         </div>
         <table class="table-striped-top">
           <tr>

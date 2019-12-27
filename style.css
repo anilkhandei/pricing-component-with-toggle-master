@@ -26,6 +26,7 @@ body{
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
+    min-width: 754px;
 }
 .header{
     /* border: 1px solid; */
@@ -33,22 +34,56 @@ body{
     margin-bottom: 10vh;
 }
 .pricing-header{
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: x-large;
+    font-weight: bold;
     color: hsl(232, 13%, 33%);
     margin-bottom: 2.5vh;
 }
 .pricing-toggle{
+    font-size: 1rem;
     color:hsl(234, 14%, 74%);
-    font-weight: bold;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid; */
+    padding: 10px;
 }
+.text-align-middle{
+    display: flex;
+    align-items: center;
+}
+.switch{
+    position: relative;
+    height: 30px;
+    width: 50px;
+    border-radius: 20px;
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    cursor: pointer;
+}
+.switch::before{
+    content: "";
+    position: absolute;
+    height:24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 1;
+    left: 3px;
+    bottom: 3px;
+}
+input{
+    display: none;
+}
+input:checked+ .switch::before{
+    transform: translateX(20px);
+}
+
 .cards-container{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
-
 .card{
     /* border: 1px solid; */
     width: 25vw;
@@ -84,10 +119,14 @@ body{
 .card-proff > .card-header{
     color: white;
 }
+
 .card-amount{
     /* border: 1px solid; */
     font-size:-webkit-xxx-large;
     font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .table-striped-top td{
     border-bottom: 1px solid #ddd;
@@ -101,6 +140,9 @@ body{
     width: 80%;
     margin: 30px;
 }
+.card-proff td{
+    color: white;
+}
 .learn-more-btn{
     background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     width:20vw;
@@ -112,6 +154,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: small;
     font-weight: 500;
+    cursor: pointer;
 }
 .learn-more-btn-white{
     background-color: white;
@@ -122,4 +165,53 @@ body{
     border-radius: 5px;
     text-transform: uppercase;
     font-size: small;
+    cursor: pointer;
 }
+@media only screen and (max-width:375px){
+    body{
+        font-size: large;
+    }
+    .header{
+        width: 100%;
+        margin-bottom: 2vh ;
+    }
+    .container{
+        margin:10px;
+    }
+    .cards-container{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    [class*="card"]{
+        border-radius: 10px 10px 10px 10px;
+        width: 300px;
+        padding: 0px;
+        margin: 10px;
+    }
+    .learn-more-btn, .learn-more-btn-white{
+        width: 250px;
+        margin: 25px;
+    }
+    .card-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+.card-proff .card-amount{
+    color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
