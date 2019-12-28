@@ -74,6 +74,7 @@ body{
 input{
     display: none;
 }
+
 input:checked+ .switch::before{
     transform: translateX(20px);
 }
@@ -128,6 +129,9 @@ input:checked+ .switch::before{
     justify-content: center;
     align-items: center;
 }
+.monthly{
+    display: none;
+}
 .table-striped-top td{
     border-bottom: 1px solid #ddd;
     line-height: 50px;
@@ -155,7 +159,11 @@ input:checked+ .switch::before{
     font-size: small;
     font-weight: 500;
     cursor: pointer;
+    border: 1px outset transparent;
 }
+
+
+
 .learn-more-btn-white{
     background-color: white;
     width:20vw;
@@ -166,6 +174,7 @@ input:checked+ .switch::before{
     text-transform: uppercase;
     font-size: small;
     cursor: pointer;
+    border: 1px solid transparent;
 }
 @media only screen and (max-width:375px){
     body{
@@ -204,12 +213,25 @@ input:checked+ .switch::before{
 }
 
 
+.learn-more-btn:hover{
+    border: 1px solid hsl(233, 13%, 49%);
+    color: hsl(233, 13%, 49%);
+    background-image: linear-gradient(white,hsl(240, 78%, 98%));
+}
+
+.learn-more-btn-white:hover{
+    border: 1px solid white;
+    color: white;
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
 
 
-
-
-
-
+#input-check:checked + [class~="annual"]{
+    display: block;
+}
+#input-check:checked + [class~="monthly"]{
+    display: none;
+}
 
 
 

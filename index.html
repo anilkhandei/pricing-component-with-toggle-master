@@ -9,6 +9,38 @@
   <link rel="stylesheet" href="/pricing-component-with-toggle-master/style.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | [Pricing Component With Toggle Master]</title>
+  <script>
+    window.onload=()=>{
+    let toggle_check=document.querySelector("#input-check");
+    let annual_cards=document.querySelectorAll(".annual");
+    let monthly_cards=document.querySelectorAll(".monthly");
+      console.log(annual_cards);
+      console.log(monthly_cards);
+
+    toggle_check.addEventListener("change",(e)=>{
+      console.log(e.target.checked);
+      if(e.target.checked){
+        annual_cards.forEach((item)=>{
+        item.style.display="none";
+      });
+      monthly_cards.forEach((item)=>{
+        item.style.display="block";
+      });
+      }
+      else{
+        annual_cards.forEach((item)=>{
+        item.style.display="block";
+      });
+      monthly_cards.forEach((item)=>{
+        item.style.display="none";
+      })
+      }
+      
+    });
+    };
+    
+  </script>
+
 </head>
 
 <body>
@@ -45,8 +77,13 @@
             19.99
           </span>
         </div>
-        <div class="card-amount annual" style="display: none;">
-          &dollar;199.99
+        <div class="card-amount annual">
+          <span class="dollar">
+            &dollar;
+          </span>
+          <span>
+            199.99
+          </span>
         </div>
         <table class="table-striped-top">
           <tr>
@@ -78,7 +115,7 @@
           <span class="dollar">$</span>
           24.99
         </div>
-        <div class="card-amount annual" style="display: none;">
+        <div class="card-amount annual">
           &dollar;249.99
         </div>
         <table class="table-striped-top">
@@ -113,7 +150,7 @@
           <span>&dollar;</span>
           39.99
         </div>
-        <div class="card-amount yearly" style="display: none;">
+        <div class="card-amount annual">
           <span>&dollar;</span>399.99
         </div>
         <table class="table-striped-top">
